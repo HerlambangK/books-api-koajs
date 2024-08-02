@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  name     String
+}
+
+model Book {
+  id       Int    @id @default(autoincrement())
+  title    String
+  date     String
+  img      String
+  isbn     String
+  seri     String
+  halaman  String
+  dimensi  String
+  content  String
+  author   String
+  category String
+  price    String
+}
