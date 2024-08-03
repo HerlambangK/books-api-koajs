@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/app.js",
+    "build": "tsc"
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",

@@ -7,6 +7,7 @@ const errorHandler = require('./middleware/errorHandler'); // Middleware error h
 
 const app = new Koa();
 const router = new Router();
+const PORT = process.env.PORT || 3303;
 
 // Middleware
 app.use(bodyParser());
@@ -18,6 +19,6 @@ router.use('/api', bookRoutes);
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => {
-	console.log('Server running on http://localhost:3000');
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
 });
