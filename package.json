@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon src/app.js",
+    "start": "npx prisma generate && nodemon src/app.js",
     "build": "tsc"
   },
   "dependencies": {
